@@ -1,11 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
-body {
-  background-color: var(--clr-Dark-blue-1);
+body,
+button,
+*::after,
+*::before {
   font-family: "Red Hat Display", sans-serif;
-  font-size: clamp(13px, 2vw, 16px);
+  font-size: clamp(13px, 2.2vw, 16px);
+}
+
+body {
+  background-color: var(--Light-blue-1);
   display: grid;
   align-items: center;
   justify-content: center;
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 0em -10em;
+  background-size: 1920px;
 }
 
 :root {
@@ -14,4 +24,88 @@ body {
   --Light-blue-2: hsl(225, 100%, 98%);
   --Light-blue-3: hsl(224, 23%, 55%);
   --Dark-blue: hsl(223, 47%, 23%);
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.order-card {
+  width: 27em;
+  border-radius: 1em;
+  overflow: hidden;
+  background-color: white;
+}
+.order-card__body {
+  padding: 2em 3em;
+}
+.order-card__title {
+  font-weight: 900;
+  font-size: 1.7em;
+  text-align: center;
+  margin: 0;
+}
+.order-card__description {
+  text-align: center;
+  color: var(--Light-blue-3);
+  padding: 1em;
+}
+.order-card__payment-plan {
+  background-color: var(--Light-blue-2);
+  padding: 1em;
+  margin-bottom: 2em;
+  border-radius: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order-card__payment-plan :first-child {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+.order-card__payment-info {
+  margin-left: 2em;
+}
+.order-card__payment-info span:first-child {
+  font-weight: 900;
+}
+.order-card__payment-info span:last-child {
+  color: var(--Light-blue-3);
+}
+.order-card__change {
+  color: var(--Bright-blue);
+  font-weight: bold;
+}
+.order-card__change:hover {
+  filter: opacity(0.5);
+}
+.order-card__proceed {
+  color: white;
+  background-color: var(--Bright-blue);
+  border-radius: 0.5em;
+  box-shadow: 0 10px 25px -10px var(--Bright-blue);
+}
+.order-card__proceed:hover {
+  filter: opacity(0.8);
+}
+.order-card__cancel {
+  color: var(--Light-blue-3);
+  background: none;
+  margin-top: 1em;
+  transition: color 500ms;
+}
+.order-card__cancel:hover {
+  color: black;
+}
+.order-card__proceed, .order-card__cancel {
+  display: block;
+  padding: 1em;
+  font-size: 0.9em;
+  width: 100%;
+  border: none;
+  font-weight: 900;
+}
+.order-card__proceed, .order-card__change {
+  transition: filter 500ms;
 }/*# sourceMappingURL=style.css.map */

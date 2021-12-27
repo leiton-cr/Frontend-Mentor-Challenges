@@ -1,13 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+body,
+button,
+*::after,
+*::before {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: clamp(13px, 2.2vw, 16px);
+}
 
 body {
-  background-color: var(--clr-Dark-blue-1);
-  font-family: 'Red Hat Display', sans-serif;
-  font-size: clamp(13px, 2vw, 16px);
-
+  background-color: var(--Light-blue-1);
   display: grid;
   align-items: center;
   justify-content: center;
+
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 0em -10em;
+  background-size: 1920px;
 }
 
 :root {
@@ -18,4 +28,106 @@ body {
   --Light-blue-3: hsl(224, 23%, 55%);
 
   --Dark-blue: hsl(223, 47%, 23%);
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.order-card {
+  width: 27em;
+  border-radius: 1em;
+  overflow: hidden;
+  background-color: white;
+
+  &__body {
+    padding: 2em 3em;
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 1.7em;
+    text-align: center;
+    margin: 0;
+  }
+
+  &__description {
+    text-align: center;
+    color: var(--Light-blue-3);
+    padding: 1em;
+  }
+
+  &__payment-plan {
+    background-color: var(--Light-blue-2);
+    padding: 1em;
+    margin-bottom: 2em;
+    border-radius: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & :first-child {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+    }
+  }
+
+  &__payment-info {
+    margin-left: 2em;
+
+    & span:first-child {
+      font-weight: 900;
+    }
+
+    & span:last-child {
+      color: var(--Light-blue-3);
+    }
+  }
+
+  &__change {
+    color: var(--Bright-blue);
+    font-weight: bold;
+
+    &:hover {
+      filter: opacity(0.5);
+    }
+  }
+
+  &__proceed {
+    color: white;
+    background-color: var(--Bright-blue);
+    border-radius: 0.5em;
+    box-shadow: 0 10px 25px -10px var(--Bright-blue);
+
+    &:hover {
+      filter: opacity(0.8);
+    }
+  }
+
+  &__cancel {
+    color: var(--Light-blue-3);
+    background: none;
+    margin-top: 1em;
+    transition: color 500ms;
+    
+    &:hover {
+      color: black;
+    }
+  }
+
+  &__proceed,
+  &__cancel {
+    display: block;
+    padding: 1em;
+    font-size: 0.9em;
+    width: 100%;
+    border: none;
+    font-weight: 900;
+  }
+
+  &__proceed,
+  &__change {
+    transition: filter 500ms;
+  }
 }
