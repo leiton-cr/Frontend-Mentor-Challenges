@@ -1,18 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
 
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
+body { 
   background-color: var(--clr-Dark-blue-1);
   font-family: "Outfit", sans-serif;
   font-size: clamp(14px, 2vw, 18px);
-  min-height: 100vh;
+ 
   display: grid;
   align-items: center;
   justify-content: center;
@@ -27,25 +19,6 @@ body {
 
   --clr-Cyan: hsl(178, 100%, 50%);
   --clr-White: hsl(0, 0%, 100%);
-}
-
-img {
-  display: inline-block;
-  max-width: 100%;
-}
-
-footer {
-  margin-top: auto;
-  padding: 1em;
-  color: white;
-}
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: var(--clr-Cyan);
 }
 
 .nft-card {
