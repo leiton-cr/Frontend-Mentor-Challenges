@@ -14,3 +14,10 @@ Reto 2
 Order summary component / HTML SCSS
 
 https://leiton-cr.github.io/Frontend-Mentor-Challenges/02-Order-summary-card/index
+
+
+Reto 3
+
+Rock, Paper, Scissors game / HTML SCSS JS
+
+https://leiton-cr.github.io/Frontend-Mentor-Challenges/03-Rock-paper-scissors/index

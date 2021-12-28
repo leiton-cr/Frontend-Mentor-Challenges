@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
 
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
 
@@ -12,13 +11,13 @@
   <link rel="stylesheet" href="../assets/normalize.css">
   <link rel="stylesheet" href="./styles/style.css">
 
-  <script src="./app.js" type="module" defer></script>
+  <script src="./scripts/app.js" type="module" defer></script>
 
 </head>
 
-
 <body>
 
+  <!-- Score board -->
   <div class="game-board">
     <div class="game-board__section">
       <img src="images/logo-bonus.svg" alt="">
@@ -29,6 +28,7 @@
     </div>
   </div>
 
+  <!-- Token board -->
   <div class="token-wrapper" id="step_1">
     <div class="token-container" id="player_selection">
 
@@ -46,6 +46,7 @@
     </div>
   </div>
 
+  <!-- Result board -->
   <div class="play-field hidden" id="step_2">
     <div class="play-field__section">
       <div class="scale-up">
