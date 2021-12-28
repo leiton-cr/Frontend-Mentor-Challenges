@@ -1,0 +1,91 @@
+.token::after{
+  animation: rotate_token 500ms;
+}
+
+.token {
+  cursor: pointer;
+  width: var(--tkn-size);
+  height: var(--tkn-size);
+
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 3px -15px 0px -8px rgba(0, 0, 0, 0.25) inset;
+}
+
+.token::before,
+.token::after {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+}
+
+.token::before {
+  width: 75%;
+  height: 75%;
+  top: 12.5%;
+  left: 12.5%;
+  background-color: white;
+  box-shadow: 0px 15px 0px -8px rgba(0, 0, 0, 0.288) inset;
+}
+
+.token::after {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 45%;
+}
+
+.token {
+  background: linear-gradient(hsl(0, 0%, 57%), hsl(0, 0%, 17%));
+}
+
+.token.lizzard {
+  background: linear-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+}
+
+.token.spock {
+  background: linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+}
+
+.token.rock {
+  background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+}
+
+.token.paper {
+  background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+}
+
+.token.scissors {
+  background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+}
+
+.token.lizzard::after {
+  background-image: url(../images/icon-lizard.svg);
+}
+
+.token.spock::after {
+  background-image: url(../images/icon-spock.svg);
+}
+
+.token.rock::after {
+  background-image: url(../images/icon-rock.svg);
+}
+
+.token.paper::after {
+  background-image: url(../images/icon-paper.svg);
+}
+
+.token.scissors::after {
+  background-image: url(../images/icon-scissors.svg);
+}
+
+@keyframes rotate_token {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

@@ -1,0 +1,82 @@
+.rules__toggle {
+  position: absolute;
+  width: 100%;
+  bottom: 10%;
+  right: 5%;
+  display: flex;
+  justify-content: flex-end;
+
+  & :first-child {
+    border-radius: 1em;
+    border: 2px solid var(--clr-Header-Outline);
+    background-color: transparent;
+    color: white;
+    text-transform: uppercase;
+    padding: 1em 3em;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 600px) {
+  .rules__toggle {
+    right: 0;
+    justify-content: center;
+  }
+}
+
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.295);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  transition: opacity 500ms;
+  opacity: 1;
+  z-index: 500;
+}
+
+.rules-modal {
+  width: 25em;
+  height: 27em;
+  background-color: white;
+  color: var(--clr-Dark-Text);
+  margin: auto;
+  background-image: url(../images/image-rules-bonus.svg);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+  border-radius: 1em;
+}
+
+.rules-modal__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rules-modal__title {
+  text-transform: uppercase;
+  margin-left: 1em;
+}
+
+.rules-modal__button {
+  padding: 0 1em;
+  cursor: pointer;
+  transition: transform 250ms;
+}
+
+.rules-modal__button:hover {
+  transform: scale(1.2);
+}
+
+.rules-toggle:checked + .modal-backdrop {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.rules-toggle:checked + .modal-backdrop + .rules-modal {
+  transform: translateY(-100%);
+  pointer-events: none;
+}

@@ -1,0 +1,55 @@
+:root {
+  --tkn-size: 8em;
+  --container-size: 20em;
+}
+
+.token-wrapper {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.token-container {
+  width: var(--container-size);
+  height: var(--container-size);
+  background-image: url(../images/bg-pentagon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+
+  &__area {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    position: relative;
+
+    &:first-child {
+      width: 120%;
+      transform: translateX(-10%);
+    }
+
+    &:last-child {
+      width: 90%;
+      transform: translateX(5%);
+    }
+
+    &.upper :nth-child(2) {
+      position: absolute;
+      top: -20%;
+      left: 33.4%;
+    }
+  }
+
+  &__area:first-child {
+    padding-top: 20%;
+    margin-bottom: 10%;
+  }
+}
+
+@media (max-width: 400px) {
+  :root {
+    --tkn-size: 6em;
+    --container-size: 15em;
+  }
+}

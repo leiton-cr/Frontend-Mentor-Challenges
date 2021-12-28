@@ -1,0 +1,36 @@
+.game-board{
+    font-size: 1.2em;
+   
+    width: 90vw;
+    max-width: 40rem;
+    min-width: 275px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: .5em;
+    outline: 4px solid var(--clr-Header-Outline);
+    padding: 1em;
+ 
+    text-transform: uppercase;
+  
+    &__section:last-child{
+      text-align: center;
+      border-radius: .5em;
+      background-color: white;
+      padding: 0 2em ;
+    }
+  
+    &__game-info :first-child{
+      margin-bottom: 0;
+      font-size: .9rem;
+      color: var(--clr-Score-Text);
+    }
+  
+    &__game-info :last-child{
+      font-size: 3rem;
+      margin: 0 0 1rem 0;
+      font-weight: 900;
+      color: var(--clr-Dark-Text);
+    }
+  
+  }
