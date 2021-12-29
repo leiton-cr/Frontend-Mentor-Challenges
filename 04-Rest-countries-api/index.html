@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../assets/normalize.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+
+  <body class="light-Mode">
+    <header>
+      <p>Where in the world?</p>
+      <p id="toggleColorMode">   
+        <ion-icon name="moon-outline"></ion-icon>
+        <ion-icon name="flash-outline"></ion-icon>
+        <span id="textMode">Switch Mode</span>
+    </p>
+    </header>
+
+    <main>
+      <div class="filtering-container">
+        <input type="text" class="search-bar" id="filteredRegion" placeholder="Search for a country..."/>
+        
+        <div class="dropdown">
+          Filter by region <ion-icon name="chevron-down-outline"></ion-icon>
+
+          <div class="dropdown__options" id="dropdownOptions">
+            <option class="dropdown__option" id="all">All</option>
+            <option class="dropdown__option" id="africa">Africa</option>
+            <option class="dropdown__option" id="americas">America</option>
+            <option class="dropdown__option" id="asia">Asia</option>
+            <option class="dropdown__option" id="europe">Europe</option>
+            <option class="dropdown__option" id="oceania">Oceania</option>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="countries-container__title">Selected region  <span id="selectedRegion">all</span></h2>
+
+      <div id="countriesContainer" class="countries-container"> </div>
+
+      <div class="details-container hidden" id="detailsContainer">
+        <button id="closeDetails">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+          Back
+        </button>
+        <div class="details-body">
+          <div id="detCountryFlag" class="details-container__flag">
+           
+          </div>
+          <div class="details-wrapper">
+            <h2 id="detCountryName">Bergiun</h2>
+            <div class="details-container__info">
+              <div class="details-container__info-section">
+                <p class="details-container__item">Official Name: 
+                  <span id="detCountryOficialName"></span>
+                </p>
+                <p class="details-container__item">Population: 
+                  <span id="detCountryPopulation"></span>
+                </p>
+                <p class="details-container__item">Region: 
+                  <span id="detCountryRegion"></span>
+                </p>
+                <p class="details-container__item">SubRegion: 
+                  <span id="detCountrySubRegion"> </span>
+                </p>
+                <p class="details-container__item">Capital: 
+                  <span id="detCountryCapital"></span>
+                </p>
+              </div>
+  
+              <div class="details-container__info-section">
+                <p class="details-container__item">Top Level Domain: 
+                  <span id="detCountryDomain">.be</span>
+                </p>
+                <p class="details-container__item">Currencies: 
+                  <span id="detCountryCurrencies">Euro</span>  
+                </p>
+                <p class="details-container__item">Languages: 
+                  <span id="detCountryLanguages">Dutch, French, German</span>  
+                </p>
+              </div>
+            </div>
+  
+            <p>Border Countries: <span id="detCountryBorders"></span></p>
+          </div>
+          
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" 
+      target="_blank">Frontend Mentor</a>. Coded by <a href="#">Luis Leiton</a>.
+    </footer>
+  </body>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+
+  <script type="module" src="./scripts/app.js"></script>
+</html>

@@ -21,3 +21,10 @@ Reto 3
 Rock, Paper, Scissors game / HTML SCSS JS
 
 https://leiton-cr.github.io/Frontend-Mentor-Challenges/03-Rock-paper-scissors/index
+
+
+Reto 4
+
+REST Countries API with color theme switcher / HTML SCSS JS API
+
+https://leiton-cr.github.io/Frontend-Mentor-Challenges/04-Rest-countries-api/index

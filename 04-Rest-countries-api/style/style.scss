@@ -1,0 +1,90 @@
+@use "./card";
+@use "./filter-bar";
+@use "./details";
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+button,
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  background-color: var(--clr-Dark-blue-1);
+
+  font-size: clamp(14px, 2vw, 18px);
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+:root {
+  --clr-Dark-Blue-1: hsl(209, 23%, 22%);
+  --clr-Dark-Blue-2: hsl(207, 26%, 17%);
+
+  --clr-Dark-Blue-3: hsl(200, 15%, 8%);
+  --clr-Dark-Gray: hsl(0, 0%, 52%);
+  --clr-Light-Gray: hsl(0, 0%, 98%);
+  --clr-White: hsl(0, 0%, 100%);
+
+  --clr-actual-text: var(--clr-White);
+  --clr-actual-header: var(--clr-Dark-Blue-1);
+  --clr-actual-body: var(--clr-Dark-Blue-2);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+header {
+  width: 100%;
+  padding: 0 10%;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--clr-actual-header);
+  color: var(--clr-actual-text);
+  box-shadow: 0 -2px 5px var(--clr-Dark-Blue-2);
+  position: sticky;
+  top: 0;
+  z-index: 500;
+}
+
+footer {
+  color: var(--clr-actual-text);
+
+  background-color: var(--clr-actual-header);
+  box-shadow: 0 2px 5px var(--clr-Dark-Blue-2);
+}
+
+main {
+  width: 80%;
+  margin-left: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.light-mode {
+  --clr-actual-text: var(--clr-Dark-Blue-1);
+  --clr-actual-header: var(--clr-White);
+  --clr-actual-body: var(--clr-Light-Gray);
+}
+
+body {
+  color: var(--clr-actual-text);
+  background-color: var(--clr-actual-body);
+}
