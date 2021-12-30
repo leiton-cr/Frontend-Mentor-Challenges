@@ -1,6 +1,6 @@
-@use "styles/info-container";
-@use "styles/search-bar";
-@use "styles/map";
+@use "info-container";
+@use "search-bar";
+@use "map";
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
 
 body,
@@ -21,7 +21,7 @@ body {
   display: grid;
   justify-content: center;
 
-  background-image: url(images/pattern-bg.png);
+  background-image: url(../images/pattern-bg.png);
   background-repeat: no-repeat;
   background-position: top;
   background-size: 100vw 16em;
