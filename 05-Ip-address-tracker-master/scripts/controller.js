@@ -43,7 +43,7 @@ export default class Controller {
         });
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {}).addTo(map);
-        L.marker([lat, long], { icon: L.icon({ iconUrl: '/05-Ip-address-tracker-master/images/icon-location.svg' }) }).addTo(map)
+        L.marker([lat, long], { icon: L.icon({ iconUrl: '/Frontend-Mentor-Challenges/05-Ip-address-tracker-master/images/icon-location.svg' }) }).addTo(map)
     }
 }
 
