@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="../assets/normalize.css">
+  <link rel="stylesheet" href="./style.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+</head>
+<body>
+
+  <div class="app__address-container">
+    <h1 class="app__title">IP Address Tracker</h1>
+ 
+    <div class="input-group">
+      <input type="text" placeholder="Search for any IP address or domain" class="search-ip__input" id="searchInput">
+      <span class="search-ip__icon" id="searchBtn"/>
+    </div>
+    
+      <div class="info-container">
+        <div class="info-container__section">
+            <p>IP Address</p>
+            <div class="info-container__fetchable">
+              <p id="ipAddress"> - </p>
+            </div>
+           
+        </div>
+        <hr>
+
+        <div class="info-container__section">
+          <p>Location</p>
+          <div class="info-container__fetchable">
+            <p id="location"> - </p>
+          </div>
+        </div>
+        <hr>
+
+        <div class="info-container__section">
+          <p>Timezone</p>
+          <div class="info-container__fetchable">
+            <p id="timeZone"> - </p>
+          </div>
+        </div>
+        <hr>
+
+        <div class="info-container__section">
+          <p>ISP</p>
+          <div class="info-container__fetchable" >
+            <p id="isp"> - </p>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+  <div class="map__container">
+    <div id="map" class="location_map"></div>
+  </div>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Luis Leiton</a>.
+  </footer>
+</body>
+
+<script type="module" src="./scripts/controller.js" defer></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"defer></script>
+
+</html>
+
+
