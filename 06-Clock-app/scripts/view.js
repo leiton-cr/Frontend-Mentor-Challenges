@@ -56,7 +56,10 @@ export default class View {
 
   updateHour(){
     const date = new Date();
-    this.hourField.innerHTML = `<p>${date.getHours()}:${date.getMinutes()}
-                                <span> ${date.getHours() < 12? 'am' :date.getHours() > 12 ? 'pm' : 'md'}</span></p>`;
+    this.hourField.innerHTML = `<p>
+                                ${date.getHours()< 9 ? '0' + date.getHours() : date.getHours()}:
+                                ${date.getMinutes() < 9 ? '0' + date.getMinutes() : date.getMinutes()}
+                                <span> ${date.getHours() < 12? 'am' :date.getHours() > 12 ? 'pm' : 'md'}</span>
+                                </p>`;
   }
 }
