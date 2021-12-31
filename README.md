@@ -35,3 +35,10 @@ Reto 5
 IP Address Tracker / HTML SCSS JS API
 
 https://leiton-cr.github.io/Frontend-Mentor-Challenges/05-Ip-address-tracker-master
+
+
+Reto 6
+
+Clock app / HTML SCSS JS API
+
+https://leiton-cr.github.io/Frontend-Mentor-Challenges/06-Clock-app
