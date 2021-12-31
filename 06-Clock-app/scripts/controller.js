@@ -25,6 +25,8 @@ export default class Controller{
         const actualInfo = await this.service.getTimeData();
 
         this.view.setData(actualInfo);
+        this.view.updateHour();
+        
         setInterval(() => {
             this.view.updateHour();
         },1000)
