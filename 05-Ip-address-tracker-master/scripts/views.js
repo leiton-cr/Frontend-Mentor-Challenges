@@ -12,4 +12,5 @@ export default class View{
         this.timeZone.innerText= ip.timeZone;
         this.isp.innerText= ip.isp;
     }
+
 }

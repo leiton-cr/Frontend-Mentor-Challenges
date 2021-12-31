@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../assets/normalize.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="day">
+    <input
+      type="checkbox"
+      id="toggleDetails"
+      class="toggle-details"
+      hidden
+      
+    />
+
+    <div class="main-container main-container__day" id="mainContainer">
+      <div class="upper-container">
+        <div class="upper-container__left-section">
+          <div class="upper-container__quote">
+            <blockquote id="quote">
+              With the realization of one’s own potential and self-confidence in
+              one’s ability, one can build a better world.
+            </blockquote>
+            <cite id="quoteAuthor">Dalai Lama</cite>
+            <button class="upper-container__quote-update" id="quoteUpdate"></button>
+          </div>
+
+          <div class="upper-container__hour-container">
+            <p class="upper-container__greeting" id="greetingIcon">
+              Good <span id="greeting"></span>, it's currently
+            </p>
+            <div class="upper-container__section" id="hour">
+              <p>11:37<span>am</span></p>
+            </div>
+            <div class="upper-container__country">in <span id="location"></span></div>
+          </div>
+        </div>
+
+        <div class="upper-container__right-section">
+          <label for="toggleDetails" class="upper-container__label-btn">
+          </label>
+        </div>
+      </div>
+
+      <div class="lower-container">
+        <div class="lower-container__details-container">
+          <div>
+            <p class="lower-container__item">Current Timezone</p>
+            <p class="lower-container__item" id="timezone"></p>
+          </div>
+
+          <div>
+            <p class="lower-container__item">Day of the year</p>
+            <p class="lower-container__item" id="day"></p>
+          </div>
+
+          <div>
+            <p class="lower-container__item">Day of the keek</p>
+            <p class="lower-container__item" id="dayWeek"></p>
+          </div>
+          <div>
+            <p class="lower-container__item">Week number</p>
+            <p class="lower-container__item" id="week"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="scripts/controller.js" type="module"></script>
+
+</html>
