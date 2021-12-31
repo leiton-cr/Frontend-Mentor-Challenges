@@ -1,0 +1,27 @@
+.lower-container {
+  &__details-container {
+    width: 80%;
+    padding: 5em 0;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 2em;
+    column-gap: 2em;
+
+    & div {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__item:nth-child(odd) {
+    font-size: 0.8em;
+    text-align: center;
+  }
+
+  &__item:nth-child(even) {
+    font-size: clamp(1rem, 5vw, 3rem);
+    font-weight: 700;
+  }
+}

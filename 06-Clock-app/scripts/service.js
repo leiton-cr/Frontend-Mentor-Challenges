@@ -1,15 +1,18 @@
 export default class Service {
   constructor() {}
-  
+
   async getQuote() {
     const response = await this.getData("https://api.quotable.io/random");
-    return {author: response.author, content:response.content};
+    return { author: response.author, content: response.content };
   }
 
   async getTimeData() {
-    
-    const addressData = await this.getData('https://api.freegeoip.app/json/?apikey=f5c104f0-69d2-11ec-b85e-21370f4e01ea');
-    const timeData = await this.getData(`http://worldtimeapi.org/api/timezone/${addressData.time_zone}`);
+    const addressData = await this.getData(
+      "https://api.freegeoip.app/json/?apikey=f5c104f0-69d2-11ec-b85e-21370f4e01ea"
+    );
+    const timeData = await this.getData(
+      `http://worldtimeapi.org/api/timezone/${addressData.time_zone}`
+    );
 
     return {
       dateTime: timeData.datetime,
@@ -17,7 +20,7 @@ export default class Service {
       dayOfWeek: timeData.day_of_week,
       weekNumber: timeData.week_number,
       timezone: addressData.time_zone,
-      location: `${addressData.country_name}, ${addressData.country_code}`
+      location: `${addressData.country_name}, ${addressData.country_code}`,
     };
   }
 
@@ -26,5 +29,4 @@ export default class Service {
     const data = await response.json();
     return data;
   }
-
 }
