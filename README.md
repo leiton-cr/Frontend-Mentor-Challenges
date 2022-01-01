@@ -41,4 +41,4 @@ Reto 6
 
 Clock app / HTML SCSS JS API
 
-https://leiton-cr.github.io/Frontend-Mentor-Challenges/06-Clock-app/index
+https://leiton-cr.github.io/Frontend-Mentor-Challenges/06-Clock-app/Index
