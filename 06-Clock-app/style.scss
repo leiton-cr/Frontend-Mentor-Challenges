@@ -28,8 +28,8 @@ p {
 }
 
 body.day {
-  --clr-font-actual: --clr-day-font;
-  --clr-bg-actual: --bg-color-day;
+  --clr-font-actual: var(--clr-day-font);
+  --clr-bg-actual: var(--bg-color-day);
 }
 
 body.night {

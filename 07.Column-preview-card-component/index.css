@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-bright-orange: hsl(31, 77%, 52%);
+  --clr-dark-cyan-1: hsl(184, 100%, 22%);
+  --clr-dark-cyan-2: hsl(179, 100%, 13%);
+  --clr-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --clr-light-gray: hsl(0, 0%, 95%);
+}
+
+button,
+body {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+body {
+  font-size: clamp(14px, 2vw, 16px);
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--clr-light-gray);
+}
+
+main {
+  height: 100%;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8em;
+  padding: 0.5em;
+  margin-top: auto;
+}
+footer a {
+  color: var(--clr-bright-orange);
+}
+
+.container {
+  margin-top: 20%;
+  display: flex;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+
+.card {
+  max-width: 22em;
+  padding: 2em;
+  color: white;
+}
+.card.card__orange {
+  --clr-button: var(--clr-bright-orange);
+  background-color: var(--clr-bright-orange);
+}
+.card.card__light-green {
+  --clr-button: var(--clr-dark-cyan-1);
+  background-color: var(--clr-dark-cyan-1);
+}
+.card.card__dark-green {
+  --clr-button: var(--clr-dark-cyan-2);
+  background-color: var(--clr-dark-cyan-2);
+}
+.card__title {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.5em;
+  color: var(--clr-light-gray);
+  text-transform: uppercase;
+}
+.card__description {
+  min-width: none;
+  color: var(--clr-transparent-white);
+  height: 12em;
+  max-width: 23ch;
+  word-break: break-word;
+}
+.card__button {
+  background-color: var(--clr-light-gray);
+  border: none;
+  text-align: center;
+  border-radius: 10em;
+  margin-bottom: 1em;
+  padding: 1em 2em;
+  transition: color 0.2s, background-color 0.2s;
+  cursor: pointer;
+  color: var(--clr-button);
+}
+.card__button:hover {
+  outline: 1px solid var(--clr-light-gray);
+  color: var(--clr-light-gray);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    margin-top: 1em;
+    flex-direction: column;
+  }
+
+  .card__description {
+    height: 8em;
+    max-width: 27ch;
+  }
+}/*# sourceMappingURL=index.css.map */
