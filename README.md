@@ -44,9 +44,15 @@ Clock app / HTML SCSS JS API
 https://leiton-cr.github.io/Frontend-Mentor-Challenges/06-Clock-app/Index
 
 
-
 Reto 7
 
 3-column preview card component / HTML SASS JSX
 
 https://leiton-cr.github.io/Frontend-Mentor-Challenges/07.Column-preview-card-component/index
+
+
+Reto 8 
+
+URL shortening API landing page / HTML SASS TS API - Made on ANGULAR
+
+https://leiton-cr.github.io/Angular-URL-Shortly/
