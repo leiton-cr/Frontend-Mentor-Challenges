@@ -1,0 +1,73 @@
+.main__container{
+    background-color: var(--dark-blue-3);
+    height: 100vh;
+    background-image: 
+    url(../assets/images/pattern-hills.svg),
+    url(../assets/images/bg-stars.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 25%,100% 100%;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter__title{
+    text-align: center;
+    max-width: 20ch;
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 1.3em;
+    letter-spacing: .2em;
+    margin-bottom: 2em;
+}
+
+.counter__counters-container{
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 1em;
+    margin-bottom: 10em;
+}
+
+.media__container{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1em;
+}
+
+.btn{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    margin: 1em;
+    
+    width: 2em;
+    height: 2em;
+}
+
+.facebook{
+    background-image: url(../assets/images/icon-facebook.svg);
+    background-position: center;
+    background-size: contain;
+}
+
+.instagram{
+    background-image: url(../assets/images/icon-instagram.svg);
+    background-position: center;
+    background-size: contain;
+}
+
+.pinterest{
+    background-image: url(../assets/images/icon-pinterest.svg);
+    background-position: center;
+    background-size: contain;
+}
+
+@media screen and (min-width:600px) {
+    .counter__title{
+        max-width: max-content;
+        margin-bottom: 4em;
+    }
+}
