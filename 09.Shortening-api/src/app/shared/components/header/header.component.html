@@ -1,0 +1,22 @@
+<div class="header__container">
+  <i class="logo"></i>
+  <div class="header__lists-container {{active ? 'active' : ''}}">
+    <ul class="header__list">
+      <li class="header__list-item">Features</li>
+      <li class="header__list-item">Pricing</li>
+      <li class="header__list-item">Resources</li>
+    </ul>
+  
+    <ul class="header__list">
+      <li class="header__list-item">
+        <button aria-label="Login" class="btn">Login</button>
+      </li>
+      <li class="header__list-item">
+        <button aria-label="Signup" class="header__signup-btn btn bg-primary-cyan">Sign-up</button>
+      </li>
+    </ul>
+  </div>
+  <button class="header__display-options btn" aria-label="display-options" (click)="displayOptions()"></button>
+</div>
+
+

@@ -1,0 +1,110 @@
+.header__container{
+    width: 80%;
+    margin: auto;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__display-options{
+    flex-shrink: 0;
+    width: 2em;
+    height: 2em;
+    background-image: url(../../../../assets/images/bars.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+  
+    filter: invert(46%) sepia(0%) saturate(0%) hue-rotate(189deg) brightness(99%) contrast(90%);
+}
+
+.header__lists-container{
+    
+    position: absolute;
+    text-align: center;
+    background-color: var(--clr-primary-violet);
+    margin: 1em 0;
+    padding: 0em;
+    border-radius: 1em;
+    color: white;
+    height: 0;
+    min-height: 0;
+    width: 90%;
+    right: 5%;
+    max-width: 400px;
+    top: 4em;
+    overflow: hidden;
+    transform-origin: top;
+    z-index: 500;
+    transition: min-height 500ms;
+}
+
+.header__lists-container.active{
+    min-height: 19em;
+}
+
+.header__list{
+    list-style: none;
+    margin: 0;
+    padding: .5em;
+}
+
+.header__list-item{
+    margin: 1em;
+}
+
+.header__list+.header__list{
+    border-top: 1px solid var(--clr-neutral-violet-1);
+}
+
+
+
+.header__signup-btn{
+    width: 100%;
+    border-radius: 10em;
+    padding: .5em;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 750px) {
+
+    .logo{
+        transform: translateY(.5em);
+    }
+
+    .header__display-options{
+        display: none;
+    }
+    
+    .header__list{
+        display: flex;
+    }
+
+    .header__lists-container.active{
+        min-height: 3.5em;
+    }
+
+    .header__lists-container{
+        position: static;
+        min-height: 3.5em;
+        margin: 0;
+        min-width: 90%;
+
+        display: flex;
+        justify-content: space-between;
+        background-color: inherit;
+        color: var(--clr-neutral-blue);
+    }
+
+    .header__signup-btn{
+        color: white;
+        transform: translateY(-.5em);
+    }
+
+    .header__list+.header__list{
+        border-top: none;
+    }
+
+}

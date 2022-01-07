@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body,
+button {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: clamp(14px,2vw,18px);
+}
+
+:root {
+  --clr-bright-blue: hsl(220, 98%, 61%);
+  --gradient-check: linear-gradient( hsl(192, 100%, 67%) 0%, hsl(280, 87%, 65%) 100%);
+  --clr-light-gray: hsl(0, 0%, 98%);
+  --clr-light-grayish-blue-1: hsl(236, 33%, 92%);
+  --clr-light-grayish-blue-2: hsl(233, 11%, 84%);
+  --clr-light-grayish-blue-3: hsl(236, 9%, 61%);
+  --clr-light-grayish-blue-4: hsl(235, 19%, 35%);
+  --clr-dark-blue: hsl(235, 21%, 11%);
+  --clr-dark-desaturated-blue: hsl(235, 24%, 19%);
+  --clr-dark-grayish-blue-1: hsl(234, 39%, 85%);
+  --clr-dark-grayish-blue-2: hsl(236, 33%, 92%) //(hover);
+  --clr-dark-grayish-blue-3: hsl(234, 13%, 71%);
+  --clr-dark-grayish-blue-4: hsl(233, 14%, 35%);
+  --clr-dark-grayish-blue-5: hsl(237, 14%, 26%);
+  --img-bg-desktop-dark: url(../images/bg-desktop-dark.jpg);
+  --img-bg-desktop-light: url(../images/bg-desktop-light.jpg);
+  --img-ico--dark: url(../images/icon-moon.svg);
+  --img-ico--light: url(../images/icon-sun.svg);
+  --clr-actual-container: var(--clr-dark-grayish-blue-5);
+  --clr-actual-background: var(--clr-dark-desaturated-blue);
+  --clr-actual-font: var(--clr-dark-grayish-blue-1);
+  --img-bg-desktop-actual: var(--img-bg-desktop-dark);
+  --img-ico-actual: var(--img-ico--dark);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: var(--clr-actual-background);
+
+  transition: color 500ms, background-color 500ms;
+}
+
+.light{
+  --clr-actual-container: var(--clr-light-gray);
+  --clr-actual-background: var(--clr-light-grayish-blue-1);
+  --clr-actual-font: var(--clr-dark-grayish-blue-4);
+
+  --img-bg-desktop-actual: var(--img-bg-desktop-light);
+  --img-ico-actual: var(--img-ico--light);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.app__body {
+  padding-top: 2em;
+  background-image: var(--img-bg-desktop-actual);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.app__container {
+  width: clamp(15em, 90vw, 35em);
+}
+.app__title {
+  color: var(--clr-light-gray);
+  text-transform: uppercase;
+  width: 100%;
+  position: relative;
+  font-kerning: none;
+}
+
+.app__input {
+  width: 100%;
+  padding: 1em;
+  background-color: var(--clr-actual-container);
+  margin: 1em 0;
+  border: none;
+  outline: none;
+  color: var(--clr-actual-font);
+  border-radius: 0.5em;
+}
+.app__input::-moz-placeholder {
+  padding-left: 0.1em;
+}
+.app__input:-ms-input-placeholder {
+  padding-left: 0.1em;
+}
+.app__input::placeholder {
+  padding-left: 0.1em;
+}
+.app__todo-container {
+  background-color: var(--clr-actual-container);
+  min-height: 65vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  border-radius: 0.5em;
+  box-shadow: 0 1px 10px 1px #00000048;
+}
+.app__bottom-message {
+  text-align: center;
+  color: var(--clr-actual-font);
+}
+.app__upper-section {
+  max-height: 60vh;
+  overflow: auto;
+}
+.app__upper-section .input-group {
+  padding: 1em;
+  color: var(--clr-actual-font);
+  border-bottom: 1px solid var(--clr-dark-grayish-blue-3);
+}
+.app__lower-section {
+  color: var(--clr-dark-grayish-blue-3);
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  justify-content: space-between;
+  font-size: 0.9em;
+  text-align: center;
+}
+.app__filter-state {
+  text-align: center;
+}
+.app__state-label {
+  transition: color 500ms;
+  margin: 0 0.5em;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.app__state-label:hover {
+  color: var(--clr-actual-font);
+}
+.app__state-check:checked + .app__state-label {
+  color: var(--clr-bright-blue);
+}
+
+.app__todo-label {
+  margin-left: 2em;
+  transition: color 500ms;
+  position: relative;
+  cursor: pointer;
+}
+
+.app__todo-label:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 0.5em;
+  transform: scaleX(0);
+  transform-origin: left;
+  background-color: var(--clr-dark-grayish-blue-4);
+  transition: transform 500ms;
+}
+
+.app__todo-check:checked + .app__todo-label:before {
+  transform: scaleX(1);
+}
+
+.app__upper-section .input-group:after {
+  content: "";
+  position: absolute;
+  width: 0.8em;
+  height: 0.8em;
+  right: 1em;
+  top: 1.1em;
+  background-image: url(../images/icon-cross.svg);
+  background-position: center;
+  transition: opacity 500ms;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.app__upper-section .input-group__delete-btn{
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  right: 1em;
+  top: 1.1em;
+ 
+  opacity:0;
+  cursor: pointer;
+
+}
+
+.input-group:hover:after {
+  opacity: 1;
+  transition: transform 500ms;
+}
+
+.input-group:after:hover {
+  transform: rotateX(360deg);
+  display: none;
+}
+
+.app__todo-check:checked + .app__todo-label:after {
+  transform: scaleX(1);
+}
+
+.app__todo-check:checked + .app__todo-label {
+  color: var(--clr-dark-grayish-blue-4);
+}
+
+.app__todo-checker {
+  outline: 2px solid var(--clr-dark-grayish-blue-4);
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  transition: outline 250ms, box-shadow 300ms;
+}
+
+.app__todo-checker:before {
+  content: "";
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  background-image: url(../images/icon-check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  opacity: 0;
+  transition: opacity 250ms;
+}
+
+.app__todo-check:checked + * > .app__todo-checker {
+  background-image: var(--gradient-check);
+  background-size: 100%;
+}
+
+.app__todo-check:checked + * > .app__todo-checker:before {
+  opacity: 1;
+}
+
+.input-group:hover > * > .app__todo-checker {
+  outline: 2px solid transparent;
+  box-shadow: 0px -1px 1px 1px #57ddff, 0px 1px 1px 1px #c058f3;
+}
+
+.input-group {
+  position: relative;
+  cursor: pointer;
+}
+
+.app__clear-completed {
+  transition: color 500ms;
+}
+
+.app__clear-completed:hover {
+  cursor: pointer;
+  color: var(--clr-actual-font);
+}
+
+@media screen and (max-width: 500px) {
+  .app__body {
+    padding-top: 0em;
+  }
+  .app__filter-state {
+    background-color: var(--clr-actual-container);
+    padding: 1em 0;
+    border-radius: 0.5em;
+    position: absolute;
+    top: 2em;
+    width: 100%;
+    left: 0;
+  }
+  .app__lower-section {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  .app__items-left {
+    width: 100%;
+    text-align: left;
+    padding-left: .5em;
+  }
+  .app__clear-completed {
+    width: 100%;
+    text-align: right;
+    padding-right: .5em;
+  }
+  .app__bottom-message {
+    margin-top: 4em;
+  }
+
+  .app__upper-section .input-group:after {
+    opacity: 1;
+  }
+
+}
+
+.app__title-container{
+  position: relative;
+}
+
+.app__toggle-color{
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  content: "";
+  
+  background-image: var(--img-ico-actual);
+  background-repeat: no-repeat;
+  top: 0;
+  right: 0;
+}
+
+.app__save-todo{
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  content: "";
+  
+  background-image: url(../images/send.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 1em;
+  right: 0;
+}

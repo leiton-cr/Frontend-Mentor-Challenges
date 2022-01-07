@@ -1,0 +1,33 @@
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--clr-primary-violet);
+  transition: background-color 250ms;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.shortened-results__container {
+  padding: 1em;
+  max-height: 10em;
+  overflow: auto;
+}
+
+.shortened-results-result__scroller {
+  max-height: 10em;
+  overflow: auto;
+}
+
+@media screen and (min-width: 600px) {
+  .shortened-results__container {
+    padding: 0 10%;
+  }
+}

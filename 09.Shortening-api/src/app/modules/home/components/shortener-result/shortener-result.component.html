@@ -1,0 +1,7 @@
+<div class="shortened-results__container">
+    <div class="shortened-results-result__scroller">
+        <ng-container *ngFor="let result of service.observer | async">
+            <app-shortened-element [element]="result" ></app-shortened-element>
+        </ng-container>
+    </div>
+</div>

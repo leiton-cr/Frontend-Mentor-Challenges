@@ -1,0 +1,39 @@
+.colored-toast-dark.swal2-icon-warning {
+  background-color: #494949 !important;
+}
+
+.colored-toast-dark.swal2-icon-success {
+  background-color: #494949 !important;
+}
+
+.colored-toast-dark .swal2-title {
+  color: white;
+}
+
+.colored-toast-dark .swal2-close {
+  color: white;
+}
+
+.colored-toast-dark .swal2-html-container {
+  color: white;
+}
+
+.colored-toast-light.swal2-icon-success {
+  background-color: #ffffff !important;
+}
+
+.colored-toast-light.swal2-icon-warning {
+  background-color: #ffffff !important;
+}
+
+.colored-toast-light .swal2-title {
+  color: rgb(71, 71, 71);
+}
+
+.colored-toast-light .swal2-close {
+  color: rgb(71, 71, 71);
+}
+
+.colored-toast-light .swal2-html-container {
+  color: rgb(71, 71, 71);
+}

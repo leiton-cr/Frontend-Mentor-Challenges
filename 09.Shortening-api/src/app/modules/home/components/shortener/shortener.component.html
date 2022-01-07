@@ -1,0 +1,10 @@
+<div class="shortener__container">
+    <div class="shortener__input-group">
+        
+        <input type="text" placeholder="Shorten a link here..." [(ngModel)]="inputUrl" (keyup)="validateURL()"
+            class="shortener__input {{inputError.status ? 'error' : '' }}">
+        <button class="shortener__button btn bg-primary-cyan" (click)="doShorteen()" [disabled]="onProgress"  > Shorten it!</button>
+        <p class="shortener__input-error"> {{inputError.message}}</p>
+
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="shortened-result">
+    <p class="shortened-result__original"> {{element?.original}} </p>
+    <div class="shortened-result__product">
+        <p class="shortened-result__product-link"> {{element?.shortened}} </p>
+        <button class="btn shortened-result__btn {{(service.lastCopy === element?.id) ? 'bg-primary-violet' : 'bg-primary-cyan' }}" (click)="onCopy()">
+            {{ (service.lastCopy === element?.id) ? "Copied...!" : "Copy"}}
+        </button>
+    </div>
+</div>
