@@ -1,0 +1,27 @@
+<div class="details {{actualPlanet?.class}}">
+  <div class="container">
+    
+    <app-planet-image-wrapper class="details__image" [actualPlanet]="actualPlanet" [animPlanet]="animator.animPlanet"></app-planet-image-wrapper>
+    
+    <div class="details__buttons {{animator.animButtons}}">
+      <button class="details__button one btn {{tab === 'overview' ? 'details__button-active' : ''}}" (click)="changeTab('overview')" ></button>
+      <button class="details__button two btn {{tab === 'structure' ? 'details__button-active' : ''}}" (click)="changeTab('structure')" ></button>
+      <button class="details__button three btn {{tab === 'geology' ? 'details__button-active' : ''}}" (click)="changeTab('geology')"> </button>
+    </div>
+
+    <div class="details__data">
+      <h2 class="details__title {{animator.animTitle}}" >{{actualPlanet?.name}}</h2>
+      <p class="details__overview {{animator.animOverview}}">
+        {{selectedData.content}}
+      </p>
+    </div>
+
+    <div class="details__facts-container {{animator.animFacts}}">
+      <div class="details__fact" *ngFor="let key  of Object.keys(actualPlanet!.facts)">
+        <p class="details__fact-title">{{key}}</p>
+        <p class="details__fact-data">{{actualPlanet.facts[key]}}</p>
+      </div>
+    </div>
+
+  </div>
+</div>

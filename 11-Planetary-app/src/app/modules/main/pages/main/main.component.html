@@ -1,0 +1,5 @@
+<div class="planets__container {{animation}} float-in">
+  <div class="astro__container" *ngFor="let astro of astros" (click)="onPlanetChange(astro)">
+    <div class="{{astro}} astro"></div>
+  </div>
+</div>

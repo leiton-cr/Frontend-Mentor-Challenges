@@ -1,0 +1,14 @@
+<header class="header">
+  <div class="container">
+    <h1 class="header__title" (click)="onSunChange('sun')">The planets</h1>
+
+    <input type="checkbox" id="toggle-menu" class="header__toggle-menu" hidden>
+    <div class="header__planet-container">
+      <button *ngFor="let planet of service.planetaryData" class="header__button btn {{planet.class}} {{planet.class === actualPlanet?.class ? 'active' : ''}}" (click)="onPlanetChange(planet.class)" >{{planet.name}}</button>
+    </div>
+
+    <label for="toggle-menu" class="header__open-menu ">
+    </label>
+
+  </div>
+</header>

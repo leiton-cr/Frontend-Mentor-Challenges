@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=Spartan:wght@700&display=swap');
+:root{
+    --clr-white: #ffffff;
+    --clr-black: #070724;
+    --clr-dark-gray: #38384f;
+    --clr-light-gray: #838391;
+    
+    --clr-bg-blue: #070625;
+    --clr-bg-blue-translucid: #070625c0;
+
+    --clr-mercury: #419ebb;
+    --clr-venus: #eda249;
+    --clr-earth: #6d2ed5;
+    --clr-mars: #d14c32;
+    --clr-jupiter: #d83a34;
+    --clr-saturn: #cd5120;
+    --clr-uranus: #1ec1a2;
+    --clr-neptune: #2d68f0;
+}
+
+*,*:before,*::after{
+    box-sizing: border-box;
+}
+
+
+body{
+   margin: 0;
+   font-family: 'Antonio', sans-serif;
+}
+
+.main__container {
+    min-height: 100vh;
+    background-color: var(--clr-bg-blue);
+    background-image: url(./assets/images/background-stars.svg);
+    overflow: hidden;
+  }
+
+.btn{
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+.sun {
+    --img-actual-img: url(./assets/images/external/sun.png);
+ }
+
+ .mercury {
+  --actual-timing: 8800ms;
+  --actual-size: 0.74em;
+  --actual-orbit: 8em;
+  --actual-defase: -110deg;
+
+  --clr-actual-color: var(--clr-mercury);
+  --img-actual-img: url(./assets/images/external/planet-mercury.svg);
+}
+
+.venus {
+  --actual-timing: 14400ms;
+  --actual-size: 1.1em;
+  --actual-orbit: 10em;
+  --actual-defase: -100deg;
+
+  --clr-actual-color: var(--clr-venus);
+  --img-actual-img: url(./assets/images/external/planet-venus.svg);
+}
+
+.earth {
+  --actual-timing: 20000ms;
+  --actual-size: 1.13em;
+  --actual-orbit: 12em;
+  --actual-defase: -150deg;
+
+  --clr-actual-color: var(--clr-earth);
+  --img-actual-img: url(./assets/images/external/planet-earth.svg);
+}
+
+.mars {
+  --actual-timing: 37600ms;
+  --actual-size: 0.83em;
+  --actual-orbit: 14em;
+  --actual-defase: -100deg;
+
+  --clr-actual-color: var(--clr-mars);
+  --img-actual-img: url(./assets/images/external/planet-mars.svg);
+}
+
+.jupiter {
+  --actual-timing: 97200ms;
+  --actual-size: 2.9em;
+  --actual-orbit: 21em;
+  --actual-defase: -200deg;
+
+  --clr-actual-color: var(--clr-jupiter);
+  --img-actual-img: url(./assets/images/external/planet-jupiter.svg);
+}
+
+.saturn {
+  --actual-timing: 58920ms;
+  --actual-size: 2.8em;
+  --actual-orbit: 25em;
+  --actual-defase: -350deg;
+
+  --clr-actual-color: var(--clr-saturn);
+  --img-actual-img: url(./assets/images/external/planet-saturn.svg);
+}
+
+.uranus {
+  --actual-timing: 168200ms;
+  --actual-size: 2.5em;
+  --actual-orbit: 29em;
+  --actual-defase: -250deg;
+
+  --clr-actual-color: var(--clr-uranus);
+  --img-actual-img: url(./assets/images/external/planet-uranus.svg);
+}
+
+.neptune {
+  --actual-timing: 329600ms;
+  --actual-size: 2.4em;
+  --actual-orbit: 33em;
+  --actual-defase: -10deg;
+
+  --clr-actual-color: var(--clr-neptune);
+  --img-actual-img: url(./assets/images/external/planet-neptune.svg);
+}
+
+@keyframes cool_entrance {
+    0%{
+      transform: scale(0);
+    }
+  
+    50%{
+      transform: scale(.25);
+    }
+    
+    100% {
+      transform: scale(1);
+    }
+  }

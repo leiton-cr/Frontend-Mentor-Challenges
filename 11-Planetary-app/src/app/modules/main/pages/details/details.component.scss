@@ -1,0 +1,306 @@
+.details {
+  display: flex;
+  margin-top: 5em;
+}
+
+.container {
+  margin: auto;
+  display: grid;
+
+  max-width: 1200px;
+  width: 90vw;
+  min-width: 270px;
+}
+
+.details__buttons {
+  order: 1;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1em;
+  border-bottom: 1px solid var(--clr-dark-gray);
+  width: 130%;
+  margin-left: -15%;
+}
+
+.details__image {
+  --planet-size: clamp(10em, 25vw, 25em);
+  max-width: 100%;
+  width: var(--planet-size);
+  height: var(--planet-size);
+  order: 2;
+  margin: auto;
+}
+
+.details__data {
+  order: 3;
+  color: rgba(255, 255, 255, 0.63);
+}
+
+.details__overview{
+  min-height: 14em;
+  font-size: clamp(10px, 2vw, 14px);
+}
+
+.details__button {
+  color: var(--clr-light-gray);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.details__title {
+  transition: font-size 500ms;
+  color: white;
+  text-align: center;
+  font-size: 3em;
+  text-transform: uppercase;
+  max-width: 90%;
+  padding: 0 1rem;
+  margin: 5%;
+}
+
+.details__facts-container{
+  font-size: clamp(11px, 2vw, 15px);
+}
+
+.details__facts-container,
+.details__overview {
+  font-family: Spartan, sans-serif;
+  line-height: 1.5em;
+  max-width: 90%;
+  padding: 1em;
+  margin: 2% 5%;
+  text-align: center;
+}
+
+.details__facts-container{
+  color: var(--clr-light-gray);
+}
+
+.details__button{
+  padding: 1em 0;
+  position: relative;
+
+  &:after{
+    font-family: spartan, sans-serif;
+  }
+
+  &.one::after{
+    content: 'Overview';
+  }
+
+  &.two::after{
+    content: 'Structure';
+  }
+
+  &.three::after{
+    content: 'Geology';
+  }
+}
+
+.details__facts-container{
+  order: 4;
+}
+
+.details__fact{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--clr-dark-gray);
+  padding: 1em;
+  margin: 1em 0; 
+}
+
+.details__fact-title{
+  text-transform: capitalize;
+  margin: 0;
+ 
+}
+
+.details__fact-data{
+  margin: 0;
+  color: white;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  font-family: antonio, sans-serif;
+}
+
+.details__button-active{
+  color: white;
+}
+
+.details__button-active:before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: .2em;
+  bottom: 0;
+  background-color: var(--clr-actual-color);
+}  
+
+
+@media screen and (min-width: 500px) {
+
+  .details{
+    margin-top: 8em;
+  }
+
+  .container {
+    grid-template-columns: 1fr 1fr ;
+    row-gap: 1em;
+    column-gap: 1em;
+  }
+
+  .details__title,
+  .details__overview{
+    text-align: left;
+  }
+
+  .details__title{
+    font-size: 4em;
+  }
+
+  .details__overview{
+    min-height: 19em;
+  }
+
+  .details__buttons{
+    grid-row: 2;
+    grid-column: 1;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    width: 85%;
+    margin-left: 0%;
+    padding-left: 2em;
+    min-width: 14em;
+  }
+
+  .details__image{
+    grid-row: 1;
+    grid-column: 1/3;
+  }
+  .details__data{
+    grid-row: 2;
+    order: 3;
+  }
+  .details__facts-container{
+    grid-row: 3;
+    min-width: 42em;
+    display: grid;
+    column-gap: 2em;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-column: 1/3;
+  }
+
+  .details__button-active{
+    background-color: var(--clr-actual-color);
+  }  
+
+  .details__button{
+    padding: 1em;
+    border: 1px solid var(--clr-light-gray);
+    margin-bottom: 1em;
+    text-align: left;
+    
+    &.one::after{
+      content: '01. Overview';
+    }
+    
+    &.two::after{
+      content: '02. Internal structure';
+    }
+    
+    &.three::after{
+      content: '03. Surface geology';
+    }
+  }
+
+  .details__button-active:before{
+    all: unset;
+  }
+
+  .details__fact{
+    flex-direction: column;
+    align-items: flex-start;
+   
+  }
+
+}
+
+@media screen and (min-width: 700px) {
+  .container {
+    grid-template-columns: 1fr 1fr ;
+  }
+
+  .details__overview{
+    min-height: 13em;
+  }
+
+  .details__buttons{
+    grid-row: 2;
+    grid-column: 2;
+    flex-direction: column;
+    border: none;
+   
+    margin-left: 0%;
+    padding-left: 2em;
+    min-width: 14em;
+  }
+
+  .details__image{
+    grid-row: 1/3;
+    grid-column: 1;
+  }
+  .details__data{
+    grid-column: 2;
+    grid-row: 1;
+    order: 3;
+  }
+
+  .details__title{
+    font-size: clamp(4em, 10vw ,6em);
+  }
+}
+
+.details__title{
+  transform: translateX(-250%);
+  opacity: 0;
+  transition: opacity 500ms, transform 500ms;
+}
+
+.details__overview{
+  transform: translateX(250%);
+  opacity: 0;
+  transition: opacity 500ms, transform 500ms;
+}
+
+.details__facts-container{
+  transform: translateY(250%);
+  opacity: 0;
+  transition: opacity 500ms, transform 500ms;
+}
+
+.details__buttons{
+  transform: translateY(250%);
+  opacity: 0;
+  transition: opacity 500ms, transform 500ms;
+}
+
+.float-in{
+  opacity: 1;
+  transform: translate(0%);
+}
+
+.float-left-out{
+  transform: translateX(250%);
+  opacity: 0;
+}
+
+.float-right-out{
+  transform: translateX(250%);
+  opacity: 0;
+}
+
+.float-bottom-out{
+  transform: translateY(250%);
+  opacity: 0;
+}

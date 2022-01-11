@@ -1,0 +1,79 @@
+.planets__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+  height: calc(100vh - 6em);
+  transform: scale(0);
+  
+  transition-timing-function: cubic-bezier(.78,.25,.07,.5);
+}
+
+.planets__container.cool_entrance{
+  transition: transform 5s;
+  transform: scale(1);
+}
+
+.planets__container.cool_exit{
+  transition: transform 2s;
+  transform: scale(0);
+}
+
+.astro {
+  position: absolute;
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+
+  border: 1px solid rgba(172, 170, 170, 0.151);
+  animation: rotate var(--actual-timing) infinite linear;
+  width: var(--actual-orbit);
+  height: var(--actual-orbit);
+  transform: rotateZ(var(--actual-defase));
+
+  &::after {
+    width: var(--actual-size);
+    height: var(--actual-size);
+    content: "";
+    top: calc(var(--actual-size) / 2 * -1);
+    left: 50%;
+    position: absolute;
+    background-image: var(--img-actual-img);
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.astro__container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 500ms;
+}
+
+.astro__container:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.astro__container:hover > .astro {
+  border: 1px solid var(--clr-actual-color);
+}
+
+.sun {
+  width: 4em;
+  height: 4em;
+
+  background-image: var(--img-actual-img);
+  background-size: 110%;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 2px orange inset, 0 0 10px 2px orange;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotateZ(calc(var(--actual-defase) + 360deg));
+  }
+}

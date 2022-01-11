@@ -1,0 +1,50 @@
+.details__image-wrapper {
+  position: relative;
+  animation: entrance-anim 10s, rotate-anim 10s infinite 10s linear;
+  transform: translateX(-250%) rotate3d(1, 1, 1, 360deg);
+  transform-style: preserve-3d;
+  transition: opacity 500ms;
+}
+
+.planet__image {
+  position: absolute;
+  max-width: 100%;
+  width: 100%;
+}
+
+.planet__image-planet {
+  perspective: 800;
+  transform-style: preserve-3d;
+  transform: rotateY(90deg);
+}
+
+.planet__image-geology {
+  width: 50%;
+  top: 5%;
+  transform: rotate3d(1, 2, 5, 90deg) translateZ(4em) translateX(4em)
+    translateY(2em);
+}
+
+@keyframes entrance-anim {
+  100% {
+    transform: translateX(0%) rotate3d(0, 0, 0, 0deg);
+  }
+}
+
+@keyframes rotate-anim {
+  0% {
+    transform: translateX(0%) rotateY(0deg);
+  }
+
+  100% {
+    transform: translateX(0%) rotateY(360deg);
+  }
+}
+
+.planet__container{
+  transition: opacity 500ms;
+}
+
+.disolve{
+  opacity: 0;
+}

@@ -1,0 +1,224 @@
+.header {
+  border-bottom: 1px solid var(--clr-dark-gray);
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  padding: 1em;
+  background-color: var(--clr-bg-blue-translucid);
+  z-index: 100;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 80vw;
+  min-width: 270px;
+}
+
+.header {
+  display: grid;
+  justify-content: center;
+}
+
+.header__title {
+  -webkit-tap-highlight-color: transparent;
+  margin: 0;
+  color: var(--clr-white);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 500ms;
+}
+
+.header__title:hover{
+  transform: scale(1.1);
+}
+
+.header__open-menu {
+  margin-top: 0.3em;
+  width: 2em;
+  height: 2em;
+  background-image: url(../../../../assets/images/icon/bars-solid.svg);
+  background-position: center;
+  background-size: cover;
+}
+
+.header__button {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "spartan", sans-serif;
+  font-size: 0.7em;
+  color: var(--clr-light-gray);
+}
+
+.header__button {
+  font-size: 1em;
+  display: block;
+  position: relative;
+  transform: translateX(200vw);
+  transition: color 500ms, font-size 500ms;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.header__button.active{
+  color: var(--clr-actual-color);
+}
+
+.header__button:hover {
+  color: var(--clr-actual-color);
+}
+
+.header__planet-container {
+  position: absolute;
+  background-color: var(--clr-bg-blue-translucid);
+  width: 100vw;
+  left: 0;
+  top: 4em;
+  height: calc(100vh - 6em);
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  padding-top: 4em;
+  transform: translateX(100vw);
+  transition: transform 500ms;
+  animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+}
+
+.header__toggle-menu:checked + .header__planet-container {
+  transform: translateX(0);
+}
+
+.header__toggle-menu:checked + * > .header__button {
+  animation: to-left 500ms forwards ;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: var(--img-actual-img);
+    background-position: center;
+    background-size: contain;
+    left: 3em;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 80vw;
+    height: 1px;
+    background-color: var(--clr-light-gray);
+    opacity: 0.5;
+    border-radius: 50%;
+    left: 10vw;
+    top: 2em;
+  }
+
+  &.mercury {
+    animation-delay: 100ms;
+  }
+  &.venus {
+    animation-delay: 200ms;
+  }
+  &.earth {
+    animation-delay: 300ms;
+  }
+  &.mars {
+    animation-delay: 400ms;
+  }
+  &.jupiter {
+    animation-delay: 500ms;
+  }
+  &.saturn {
+    animation-delay: 600ms;
+  }
+  &.uranus {
+    animation-delay: 700ms;
+  }
+  &.neptune {
+    animation-delay: 800ms;
+  }
+}
+
+@keyframes to-left {
+  0%{
+    transform: translateX(200vw);
+  }
+
+  75% {
+    transform: translateX(-10vw);
+  }
+
+  100% {
+    transform: translateX(0vw);
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .header__toggle-menu + * > .header__button{
+    animation: to-left 500ms forwards ;
+    &.mercury {
+      animation-delay: 100ms;
+    }
+    &.venus {
+      animation-delay: 200ms;
+    }
+    &.earth {
+      animation-delay: 300ms;
+    }
+    &.mars {
+      animation-delay: 400ms;
+    }
+    &.jupiter {
+      animation-delay: 500ms;
+    }
+    &.saturn {
+      animation-delay: 600ms;
+    }
+    &.uranus {
+      animation-delay: 700ms;
+    }
+    &.neptune {
+      animation-delay: 800ms;
+    }
+  }
+
+    .header__button{
+        font-size: .6em;
+    }
+
+    .header__toggle-menu:checked + * > .header__button{
+        &::after, &::before{
+            all: unset;
+        }   
+    }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 700px;
+  }
+
+  .header__open-menu {
+    display: none;
+  }
+
+  .header__button {
+    display: inline-block;
+  }
+
+  .header__planet-container {
+    all: unset;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
