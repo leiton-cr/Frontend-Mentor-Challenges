@@ -71,3 +71,16 @@ Launch countdown timer / HTML SASS TS API - Made on ANGULAR
 
 https://leiton-cr.github.io/Countdown-Angular/
 
+
+Reto 11
+
+Planetary app / HTML SASS TS API - Made on ANGULAR
+
+https://leiton-cr.github.io/Angular-Planetary-App/
+
+
+Reto 12
+
+QR code component / HTML SCSS
+
+https://leiton-cr.github.io/Frontend-Mentor-Challenges/12-QR-Code-Component/index
