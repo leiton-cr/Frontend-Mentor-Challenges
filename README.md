@@ -84,3 +84,10 @@ Reto 12
 QR code component / HTML SCSS
 
 https://leiton-cr.github.io/Frontend-Mentor-Challenges/12-QR-Code-Component/index
+
+
+Reto 13
+
+Advice generator / HTML CSS API
+
+https://leiton-cr.github.io/Frontend-Mentor-Challenges/13-Advice-generator/index
