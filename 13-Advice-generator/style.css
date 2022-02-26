@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--clr-dark-grayish-blue);
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(16px, 3vw, 20px);
+}
+
+footer{
+    margin-top: auto;
+    margin-bottom: 1em;
+}
+
+main{
+    margin: auto;
+}
+
+:root {
+  --clr-light-cyan: hsl(193, 38%, 86%);
+  --clr-neon-green: hsl(150, 100%, 66%);
+
+  --clr-grayish-blue: hsl(215, 19%, 27%);
+  --clr-dark-grayish-blue: hsl(220, 20%, 12%);
+}
+
+.advice__body{
+  background-color: var(--clr-grayish-blue);
+  padding: 1em;
+  margin: auto;
+  border-radius: .5em;
+  text-align: center;
+  position: relative;
+  min-width: 250px;
+  max-width: 90%;
+}
+
+.advice__id{
+  color: var(--clr-neon-green);
+  font-size: .6em;
+  margin: .5em;
+}
+
+.advice__message{
+  color: var(--clr-light-cyan);
+  margin: .5em;
+  
+}
+
+.advice__btn{
+  
+  width: 1rem;
+  height: 1rem;
+  background-image: url(./images/icon-dice.svg);
+  background-position: center;
+  background-size: .7rem;
+  background-repeat: no-repeat;
+  background-color: var(--clr-neon-green);
+  padding: 1em;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: -1em;
+  left: calc(50% - .9rem);
+
+  transition: filter .5s;
+}
+
+.advice__btn:hover{
+  filter: drop-shadow(0 0 .5rem var(--clr-neon-green));
+}
+
+.advice__btn:disabled{
+  cursor: progress;
+}
+
+.advice__divider-group{
+  position: relative;
+}
+
+.advice__icon{
+  position: relative;
+  height: .7em;
+  margin: .5em;
+  display: inline-block;
+}
+
+.advice__divider-group::after,
+.advice__divider-group::before{
+  content: '';
+  background-color: var(--clr-light-cyan);
+  width: calc(50% - 15px);
+  height: 1px;
+  position: absolute;
+  top: .7em;
+}
+
+.advice__divider-group::after{
+  right: 0;
+}
+
+.advice__divider-group::before{
+  left: 0;
+}
+
+
+
+.attribution {
+  color: snow;
+  font-size: 10px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--clr-neon-green);
+}
