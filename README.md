@@ -91,3 +91,9 @@ Reto 13
 Advice generator / HTML CSS API
 
 https://leiton-cr.github.io/Frontend-Mentor-Challenges/13-Advice-generator/index
+
+Reto 14
+
+Interactive rating / HTML CSS JS
+
+https://leiton-cr.github.io/Frontend-Mentor-Challenges/14-Interactive-rating-component-main/index
