@@ -103,3 +103,9 @@ Reto 15
 Product preview card component / HTML CSS
 
 https://leiton-cr.github.io/Frontend-Mentor-Challenges/15-Product-preview-card-component/index.html
+
+Reto 16
+
+Expenses chart component / HTML CSS JS
+
+https://leiton-cr.github.io/Frontend-Mentor-Challenges/16-Expenses-chart-component/index.html
