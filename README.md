@@ -108,4 +108,4 @@ Reto 16
 
 Expenses chart component / HTML CSS JS
 
-https://leiton-cr.github.io/Frontend-Mentor-Challenges/16-Expenses-chart-component/index.html
+https://leiton-cr.github.io/Frontend-Mentor-Challenges/16-Expenses-chart-component/index
