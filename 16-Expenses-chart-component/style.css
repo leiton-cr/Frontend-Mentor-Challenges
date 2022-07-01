@@ -1,0 +1,107 @@
+:root {
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(14px, 2vw, 18px);
+
+  --cyan: hsl(186, 34%, 60%);
+  --cream: hsl(27, 66%, 92%);
+  --orange: hsl(33, 100%, 98%);
+
+  --orange-400: hsl(10, 79%, 65%);
+
+  --brown-400: hsl(25, 47%, 15%);
+  --brown-100: hsl(28, 10%, 53%);
+}
+
+p {
+  margin: 0;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+}
+
+.body {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cream);
+}
+
+.accented__value {
+  font-weight: 700;
+}
+
+.card {
+  min-width: 270px;
+  width: 80%;
+  max-width: 400px;
+}
+
+.card__footer,
+.card__main {
+  background-color: var(--orange);
+  padding: 1em;
+}
+
+.card__main {
+  border-radius: 1em 1em 0 0;
+}
+
+.card__days {
+  border-bottom: 1px solid var(--cream);
+  display: flex;
+  justify-content: space-between;
+
+  min-height: 150px;
+  align-items: flex-end;
+  text-align: center;
+}
+
+.card__footer {
+  border-radius: 0 0 1em 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__header {
+  background-color: var(--orange-400);
+  margin-bottom: 1em;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  align-items: center;
+}
+
+.card__header-details {
+  color: white;
+}
+
+.card__footer-detail:last-child {
+  text-align: right;
+}
+
+.card__day {
+  width: 2em;
+  cursor: pointer;
+}
+
+.card__day:hover > .card__day-bar {
+  background-color: var(--cyan);
+}
+
+.card__day-bar {
+  width: 1.5em;
+ 
+  border-radius: 0.2em;
+  background-color: var(--orange-400);
+  transition: background-color 0.25s;
+}
+
+.card__balance {
+  font-size: 1.2em;
+}
+.card__month-value {
+  font-size: 1.5em;
+}
