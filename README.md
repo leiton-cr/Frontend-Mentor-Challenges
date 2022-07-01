@@ -97,3 +97,9 @@ Reto 14
 Interactive rating / HTML CSS JS
 
 https://leiton-cr.github.io/Frontend-Mentor-Challenges/14-Interactive-rating-component-main/index
+
+Reto 15
+
+Product preview card component / HTML CSS
+
+https://leiton-cr.github.io/Frontend-Mentor-Challenges/15-Product-preview-card-component/index
