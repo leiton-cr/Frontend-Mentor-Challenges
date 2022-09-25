@@ -109,3 +109,16 @@ Reto 16
 Expenses chart component / HTML CSS JS
 
 https://leiton-cr.github.io/Frontend-Mentor-Challenges/16-Expenses-chart-component/index
+
+Reto 17
+
+Notifications page / HTML CSS
+
+https://leiton-cr.github.io/Frontend-Mentor-Challenges/17-Notifications-page
+
+Reto 18
+
+Password generator / HTML CSS JS
+
+https://leiton-cr.github.io/Password-Generator-App/
+
